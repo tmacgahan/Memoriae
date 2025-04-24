@@ -1,0 +1,25 @@
+{
+	"title": "How to make mashed potatoes",
+	"splash": "potato-title.png",
+	"cards": [{
+			"title": "Step 1",
+			"text": "Boil 'em",
+			"img": "boilem-card.png"
+		},
+		{
+			"title": "Step 2",
+			"text": "Mash 'em",
+			"img": "mashem-card.png"
+		},
+		{
+			"title": "Step 3",
+			"text": "Stick 'em in a stew",
+			"img": "stickem-card.png"
+		},
+		{
+			"title": "Summary",
+			"text": "So you see, you wanna boilem mashem stickem in a stew",
+			"img": "summary.png"
+		}
+	]
+}
