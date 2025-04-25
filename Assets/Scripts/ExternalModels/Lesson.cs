@@ -1,7 +1,10 @@
-[System.Serializable]
-public class Lesson {
-    public string title;
-    public string splash;
+namespace ExternalModel {
 
-    public Card[] cards;
+    [System.Serializable]
+    public class Lesson {
+        public string title;
+        public string splash;
+
+        public Card[] cards;
+    }
 }

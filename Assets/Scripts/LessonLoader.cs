@@ -1,15 +1,16 @@
 using UnityEngine;
 using System.IO;
+using ExternalModel;
 
-public class LessonLoader : MonoBehaviour {
+public class LessonLoader {
 
-    public SpriteRenderer imageRenderer;
-    public string lessonModule = "Potatoes/";
-    private readonly string lessonDirectory = "Assets/LessonModules/
-    private readonly string lessonFileName = "lesson.json";
-    private string lessonPath = lessonDirectory + lessonModule + lessonFile;
+    // refactor path stuff for configurability
+    public static readonly string lessonDirectory = "Assets/LessonModules/";
+    public static readonly string lessonFileName = "lesson.json";
+    public static readonly string lessonModule = "Potatoes/";
+    private static string lessonPath = lessonDirectory + lessonModule + lessonFileName;
 
-    public Lesson LoadLesson() {
+    public static Lesson LoadLesson() {
         if( !Directory.Exists(lessonDirectory) ) {
             Errors.HaltAndCatchFire("Lessons folder not found: " + lessonPath);
         }
@@ -22,7 +23,7 @@ public class LessonLoader : MonoBehaviour {
             Errors.HaltAndCatchFire("Lesson json not found: " + lessonPath);
         }
 
-        string jsonData = File.ReadAllText(lessonDirectory);
+        string jsonData = File.ReadAllText(lessonPath);
 
         // validation
 
@@ -30,5 +31,6 @@ public class LessonLoader : MonoBehaviour {
 
         // validation
 
-        return Lesson;
+        return lesson;
     }
+}

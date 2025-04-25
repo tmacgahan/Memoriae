@@ -4,29 +4,8 @@ using System.IO;
 public class PNGLoader : MonoBehaviour {
 
     public SpriteRenderer imageRenderer;
-    public string lessonPath = "Assets/LessonModules/Potatoes/";
 
-    public void LoadRandomPNG() {
-        if (!Directory.Exists(lessonPath)) {
-            Debug.LogError("PNG folder not found: " + lessonPath);
-            return;
-        }
-
-        //string[] pngFiles = Directory.GetFiles(pngFolderPath, "*.png");
-
-        /*
-        if (pngFiles.Length > 0) {
-            int randomIndex = Random.Range(0, pngFiles.Length);
-            string selectedFilePath = pngFiles[randomIndex];  // for now we do it random
-            LoadPNGFromFile(selectedFilePath);
-        } else {
-            Debug.LogWarning("No PNG files found in: " + pngFolderPath);
-        }
-        */
-    }
-
-    /*
-    public void LoadPNGFromFile(string filePath) {
+    public void LoadImage(string filePath) {
         if (File.Exists(filePath)) {
             byte[] fileData = File.ReadAllBytes(filePath);
             Texture2D texture = new Texture2D(2, 2); // Create an empty texture
@@ -46,5 +25,4 @@ public class PNGLoader : MonoBehaviour {
             Debug.LogError("File not found: " + filePath);
         }
     }
-    */
 }

@@ -5,7 +5,7 @@ public class TextController : MonoBehaviour {
     public TMP_Text title;
     public TMP_Text text;
     
-    public void Start() {
+    public void Awake() {
         if( title == null || text == null ) {
             if( title == null ) {
                 Debug.LogError( "Title not set!" );
@@ -17,9 +17,11 @@ public class TextController : MonoBehaviour {
 
             Errors.HaltAndCatchFire( "Required text tools not available." );
         }
+    }
 
-        title.text = "Hello";
-        text.text = "World!";
+    public void SetTitleAndText( string setTitle, string setText ) {
+        title.text = setTitle;
+        text.text = setText;
     }
 
 }
