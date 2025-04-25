@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public delegate void ButtonCallback();
 
@@ -40,10 +41,13 @@ public class ButtonController : MonoBehaviour {
         correctCallback = setCorrectCallback;
         incorrectCallback = setIncorrectCallback;
     }
-    public void SetAnswerCardMode(ButtonCallback setAnswer1, ButtonCallback setAnswer2, ButtonCallback setAnswer3) {
+    public void SetAnswerCardMode(ButtonCallback setAnswer1, string a1Text, ButtonCallback setAnswer2, string a2Text, ButtonCallback setAnswer3, string a3Text) {
         ResetButtons(answer1, answer2, answer3);
+        answer1.GetComponentsInChildren<TMP_Text>()[0].text = a1Text;
         answer1Callback = setAnswer1;
+        answer2.GetComponentsInChildren<TMP_Text>()[0].text = a2Text;
         answer2Callback = setAnswer2;
+        answer3.GetComponentsInChildren<TMP_Text>()[0].text = a3Text;
         answer3Callback = setAnswer3;
     }
 

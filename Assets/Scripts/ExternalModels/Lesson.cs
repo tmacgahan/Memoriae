@@ -6,5 +6,7 @@ namespace ExternalModel {
         public string splash;
 
         public Card[] cards;
+        public Association[] associations;
+        public QuizQuestion[] questions;
     }
 }

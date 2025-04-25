@@ -21,5 +21,35 @@
 			"text": "So you see, you wanna boilem mashem stickem in a stew",
 			"img": "summary.png"
 		}
-	]
+	],
+	"associations": [{
+		"front": "Step 1",
+		"back": "Boil 'em"
+	},
+	{
+		"front": "Step 2",
+		"back": "Mash 'em"
+	},
+	{
+		"front": "Step 3",
+		"back": "Stick 'em in a stew"
+	}],
+	"questions": [{
+		"question": "what do you do first?",
+		"correct": "boil 'em",
+		"alternative1": "call the police",
+		"alternative2": "eat it raw"
+	},
+	{
+		"question": "what do you do after you boil 'em?",
+		"correct": "mash 'em",
+		"alternative1": "dance",
+		"alternative2": "freak out"
+	},
+	{
+		"question": "what do you do last?",
+		"correct": "stick 'em in a stew",
+		"alternative1": "stick 'em in your face",
+		"alternative2": "stick 'em in the glove compartment"
+	}]
 }
