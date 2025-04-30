@@ -49,6 +49,8 @@ public class ButtonController : MonoBehaviour {
         answer2Callback = setAnswer2;
         answer3.GetComponentsInChildren<TMP_Text>()[0].text = a3Text;
         answer3Callback = setAnswer3;
+
+        Debug.Log( string.Format( "Set answer card {0} / {1} / {2}", a1Text, a2Text, a3Text ) );
     }
 
     public void OnFullScreenButtonClick() { Debug.Log("Fullscreen clicked!"); fullScreenCallback(); }

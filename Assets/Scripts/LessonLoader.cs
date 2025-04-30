@@ -7,7 +7,8 @@ public class LessonLoader {
     // refactor path stuff for configurability
     public static readonly string lessonDirectory = "Assets/LessonModules/";
     public static readonly string lessonFileName = "lesson.json";
-    public static readonly string lessonModule = "Potatoes/";
+    //public static readonly string lessonModule = "Potatoes/";
+    public static readonly string lessonModule = "Numbers/";
     private static string lessonPath = lessonDirectory + lessonModule + lessonFileName;
 
     public static Lesson LoadLesson() {

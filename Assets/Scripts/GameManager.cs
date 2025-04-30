@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void StartMenu() {
+        Debug.Log( "Starting up!" );
         pngLoader.LoadImage(imgPath + lesson.splash);
         textController.SetTitleAndText("", "");
         buttonController.SetAnswerCardMode(StartLesson, "Lesson", StartSRS, "SRS", StartQuiz, "Quiz");
@@ -81,8 +82,8 @@ public class GameManager : MonoBehaviour {
     private void SRSAnswer(Association assoc) {
         textController.SetTitleAndText("", assoc.back);
         buttonController.SetMemoryCardMode(
-            () => { Debug.Log("correct!"); NextSRS(); },
-            () => { Debug.Log("incorrect!"); NextSRS(); }
+            () => { Debug.Log("correct!"); srsManager.Correct(assoc); NextSRS(); },
+            () => { Debug.Log("incorrect!"); srsManager.Incorrect(assoc); NextSRS(); }
         );
     }
 
